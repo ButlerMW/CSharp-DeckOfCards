@@ -1,16 +1,10 @@
 using System;
 using System.Collections.Generic;
+
 namespace DeckOfCards
 {
     public class Deck
     {
-        // public List<Card> cards = new List<Card>();  
-        // // make sure that is has a lisof 52 unique cards as its 'cards' property
-        // // 'deal' method selects 'top'card, removes from list and returns Card
-        // // resentmethod resets cards property containing original 52 cards
-        // // shuffle method that reandomly reorders deck cards.
-
-
         public List<Card> cards = new List<Card>();
 
         public Deck()
@@ -55,12 +49,5 @@ namespace DeckOfCards
                 cards[i] = temp;
             }
         }
-
-
-
-
-
-
-
     }
 }
