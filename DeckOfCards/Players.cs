@@ -1,29 +1,29 @@
 using System;
 using System.Collections.Generic;
+
 namespace DeckOfCards
 {
     public class Players
     {
-        public string name;
-        public List<Card> hand = new List<Card>();
+        public string Name;
+        public List<Card> Hand = new List<Card>();
 
         public Players (string n)
         {
-            name = n;
+            Name = name;
         }
 
-        Random rand = new Random();
         public void Draw(Deck cards)
         {
-            hand.Add(cards.Deal());
+            Console.WriteLine("Drawing a Card");
+            Hand.Add(cards.Deal());
         }
 
         public Card Discard(int indexNum)
         {
-            Card temp = hand[indexNum];
-            hand.RemoveAt(indexNum);
+            Card temp = Hand[indexNum];
+            Hand.RemoveAt(indexNum);
             return temp;
         }
-
     }
 }
