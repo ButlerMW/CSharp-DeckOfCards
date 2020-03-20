@@ -3,9 +3,6 @@ namespace DeckOfCards
     public class Card
     
     {
-        // public string[] stringVal = new string[] {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
-        // public string[] suit = new string[] {"Clubs","Spades","Hearts","Diamons"};
-        // // public int[] val = new int[] {1,2,3,4,5,6,7,8,9,10,11,12,13}; // might not need this exactly??
         public string stringVal
         {
             get 
@@ -37,14 +34,14 @@ namespace DeckOfCards
             }
         }
 
-        public string suit;
+        public string Suit;
 
-        public int val;
+        public int Val;
 
-        public Card(int v, string s)
+        public Card(int val, string suit)
         {
-            val = v;
-            suit = s;
+            Val = val;
+            Suit = suit;
         }
     }
 }
