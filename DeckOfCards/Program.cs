@@ -6,21 +6,23 @@ namespace DeckOfCards
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Shuffle Deck!");
+            Console.WriteLine("Let's play Cards!");
+            Console.WriteLine("Let's play cards!");
             Deck myDeck = new Deck();
-            Players myPlayer = new Players("Dan");
-            myDeck.shuffle();
-            Console.WriteLine("this should print out the deck");
-            Console.WriteLine(myDeck);
-            myPlayer.Draw(myDeck);
-            myPlayer.Draw(myDeck);
-            myPlayer.Draw(myDeck);
-            myPlayer.Discard(1);
-            Console.WriteLine(myPlayer.hand);
-            Console.WriteLine("this should print out thehand");
-
-
-
+            Players Dan = new Players("Dan");
+            myDeck.Shuffle();
+            Console.WriteLine(myDeck.cards.Count);
+            Dan.Draw(myDeck);
+            Console.WriteLine(Dan.Hand.Count);
+            Dan.Draw(myDeck);
+            Console.WriteLine(Dan.Hand.Count);
+            Dan.Draw(myDeck);
+            Dan.Discard(1);
+            Console.WriteLine(Dan.Hand.Count);
+            myDeck.Shuffle();
+            Console.WriteLine(myDeck.cards.Count);
+            Console.WriteLine(Dan.Hand[0].Val);
+            Console.WriteLine("This should print out the hand");
         }
     }
 }
